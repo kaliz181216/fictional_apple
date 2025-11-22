@@ -1,4 +1,192 @@
 @charset "UTF-8";
+
+
+.lora-example {
+    font-family: "Lora", serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+}
+
+/* ====================
+general
+==================== */
+
+:root {
+    --basered: #cc3333;
+    --basedarkred: #660000;
+    --basedarkred2: #330000;
+
+    --txtHeight: 1.3;
+    --contentPadding: 4.0%;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: "Noto Serif JP", serif;
+    font-style: normal;
+    font-weight: 500;
+    color: #ffffff;
+    background-color: var(--basedarkred, #660000);
+    line-height: var(--txtHeight, 1.3);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* ====================
+header
+==================== */
+.header,
+.nav__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px var(--contentPadding);
+    border-bottom: double 3px var(--basedarkred2);
+}
+
+.header__logo,
+.nav__logo {
+    width: 100px;
+}
+
+.header__btn,
+.nav__btn {
+    width: 60px;
+    padding-left: 10px;
+}
+
+/* nav初期表示 */
+.nav {
+    background-image: url(../images/appletexture.png);
+    background-repeat: repeat;
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    transform: translateX(-100%);
+    transition: transform 0.4s;
+    color: var(--basedarkred2);
+    font-size: 1.5rem;
+}
+
+.nav.active {
+    transform: translateX(0);
+}
+
+.nav__header {
+    background-color: var(--basedarkred);
+}
+
+.nav__list {
+    display: flex;
+    flex-direction: column;
+    padding-top: 20px;
+    gap: 10px;
+    box-shadow: inset 0 4px 4px rgba(0, 0, 0, 0.35);
+}
+
+.nav__item::before {
+    content: "";
+    display: inline-block;
+    width: 28px;
+    height: 1px;
+    background-color: var(--basedarkred2);
+    margin: 0 16px 5px;
+}
+
+.nav__sns {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 50px;
+    gap: 20px;
+}
+
+.nav__snstopic {
+    text-align: center;
+}
+
+.nav__snslist {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 100px;
+}
+
+.nav__snsitem {
+    width: 60px;
+}
+
+.article {
+    font-size: 1.5rem;
+    line-height: var(--txtHeight);
+}
+
+.section{
+    padding: 20px 0 40px;
+}
+
+/* ====================
+main visual
+==================== */
+
+.article__header {
+    padding: 30px var(--contentPadding);
+    background-image: url(../images/appletexture.png);
+    background-repeat: repeat;
+    box-shadow: inset 0 4px 4px rgba(0, 0, 0, 0.35);
+}
+
+.mainImg {
+    border: 3px solid var(--basedarkred);
+    padding: 15px;
+    position: relative;
+    z-index: 0;
+}
+
+.mainImg__frame {
+    box-shadow: inset 3px 4px 4px rgba(0, 0, 0, 0.35);
+}
+
+.mainImg__sp {
+    position: relative;
+    z-index: -1;
+}
+
+.mainImg__pc {
+    display: none;
+}
+
+/* ====================
+about
+==================== */
+.section__topic {
+    font-family: "Lora", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 2.4rem;
+    text-align: center;
+    text-decoration: underline;
+}
+
+.about__wrapper{
+    background-image: url(../images/lace.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+
+
 /* ====================
 common
 ==================== */

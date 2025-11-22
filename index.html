@@ -22,14 +22,15 @@
 	<link rel="apple-touch-icon" sizes="180x180" href="assets/images/apple-touch-icon.png">
 	<link rel="icon" type="image/png" href="assets/images/android-chrome-256x256.png">
 
-	<!-- web font -->
+	<!-- web font Noto Serif JP, Lora -->
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@700&display=swap" rel="stylesheet">
+	<link
+		href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;1,400&family=Noto+Serif+JP:wght@200..900&display=swap"
+		rel="stylesheet">
 
 	<!-- css -->
-	<link rel="stylesheet" href="assets/css/destyle.css">
+	<link rel="stylesheet" href="assets/css/destyle.min.css">
 	<link rel="stylesheet" href="assets/css/style.css">
 </head>
 
@@ -39,14 +40,16 @@
 		<nav class="nav">
 			<div class="nav__header">
 				<p class="nav__logo"><img src="assets/images/logo.png" alt="赤のひととき"></p>
-				<img class="nav__btn" src="assets/images/btn-close.svg" alt="">
+				<div class="nav__btn">
+					<img src="assets/images/btn-close.svg" alt="">
+				</div>
 			</div>
 			<ul class="nav__list">
-				<li class="nav__item"><a href="#"><img src="assets/images/icon-nav_top.svg" alt="">Top</a></li>
-				<li class="nav__item"><a href="#lineUp"><img src="assets/images/icon-nav-lineup.svg" alt="">商品一覧</a>
+				<li class="nav__item"><a href="#"></a>Top</a></li>
+				<li class="nav__item"><a href="#lineUp">商品一覧</a>
 				</li>
-				<li class="nav__item"><a href="#news"><img src="assets/images/icon-nav-news.svg" alt="">お知らせ</a></li>
-				<li class="nav__item"><a href="#access"><img src="assets/images/icon-nav_access.svg" alt="">店舗情報</a>
+				<li class="nav__item"><a href="#news">お知らせ</a></li>
+				<li class="nav__item"><a href="#access">店舗情報</a>
 				</li>
 			</ul>
 			<div class="nav__sns">
@@ -59,29 +62,34 @@
 						<a href="#" target="_blank"><img src="assets/images/icon-y_red.svg" alt=""></a>
 					</li>
 				</ul>
-
 			</div>
 		</nav>
 		<!-- header__btn -->
-		<img class="header__btn" src="assets/images/btn-menu.svg" alt="">
+		<div class="header__btn">
+			<img src="assets/images/btn-menu.svg" alt="">
+		</div>
 	</header>
 	<main class="main">
 		<article class="article">
 			<header class="article__header">
-				<p class="mainImg">
-					<img class="mainImg__sp" src="assets/images/main-sp.jpg" alt="赤のひとときについて">
-					<img class="mainImg__pc" src="assets/images/main-pc.jpg" alt="赤のひとときについて">
-				</p>
+				<div class="mainImg">
+					<div class="mainImg__frame">
+						<img class="mainImg__sp" src="assets/images/main-sp.jpg" alt="赤のひとときについて">
+						<img class="mainImg__pc" src="assets/images/main-pc.jpg" alt="赤のひとときについて">
+					</div>
+				</div>
 			</header>
 			<section class="section section--about">
 				<h2 class="section__topic">
 					About
 				</h2>
-				<div class="about">
-					<div class="about__catch">りんごが彩る、<br class="spbr">赤のひととき</div>
-					<div class="about__caption">
-						<p>豊かな水資源と冷涼な気候に恵まれた<ruby>振津県輪呉市<rt>ふるつけんりんごし</rt></ruby></p>
-						<p>私たちはこの地でのみ育つ特別なりんご「<ruby>逢振<rt>おうふる</rt></ruby>」で素敵なひとときをお届けします。</p>
+				<div class="about__wrapper">
+					<div class="about">
+						<div class="about__catch">りんごが彩る、<br class="spbr">赤のひととき</div>
+						<div class="about__caption">
+							<p>豊かな水資源と冷涼な気候に恵まれた<ruby>振津県輪呉市<rt>ふるつけんりんごし</rt></ruby></p>
+							<p>私たちはこの地でのみ育つ特別なりんご「<ruby>逢振<rt>おうふる</rt></ruby>」で素敵なひとときをお届けします。</p>
+						</div>
 					</div>
 				</div>
 
@@ -164,35 +172,30 @@
 					</li>
 				</ul>
 			</section>
-
-			//11.21ここまで
 			<section id="news" class="section section--news">
 				<h2 class="section__topic section__topic--news">
 					News
 				</h2>
 				<dl class="news__list">
 					<dt class="news__topic">
-						<time datetime="2023-04-12">04.12</time>
-						<span>ゴールデンウィーク営業時間のお知らせ</span>
+						<time datetime="2099-05-01">20xx.05.01</time>
 					</dt>
 					<dd class="news__txt">
-						ゴールデンウィークは店舗によって営業時間が異なります。詳しくはこちらをご覧ください
+						新商品アイス「りんごの木陰」登場
 					</dd>
 
 					<dt class="news__topic">
-						<time datetime="2023-04-10">04.10</time>
-						<span>期間限定メニューが登場</span>
+						<time datetime="2099-04-22">20xx.04.22</time>
 					</dt>
 					<dd class="news__txt">
-						新店舗に新しく「期間限定」のメニューが登場しました！ここだけでしか変えないメニューが盛沢山です！
+						サイトメンテナンスのお知らせ
 					</dd>
 
 					<dt class="news__topic">
-						<time datetime="2023-04-05">04.05</time>
-						<span>「DHWパンフェア」スタートしました！</span>
+						<time datetime="2099-03-18">20xx.03.18</time>
 					</dt>
 					<dd class="news__txt">
-						本日10:00よりオープンになります。ぜひお立ち寄りください。
+						雪室りんご発送開始のお知らせ
 					</dd>
 				</dl>
 			</section>
@@ -200,49 +203,61 @@
 				<h2 class="section__topic">
 					Access
 				</h2>
-				<address class="address">
-					<img src="assets/images/icon-nav_access.svg" alt="">
-					123-4567　東京都千代田区神田駿河台0-1
-				</address>
-				<iframe class="map"
-					src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3240.0846151236638!2d139.76244991186212!3d35.69953532885313!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188c197ff54af3%3A0xafbdf5a03fa6d46d!2z44CSMTAxLTAwNjIg5p2x5Lqs6YO95Y2D5Luj55Sw5Yy656We55Sw6ae_5rKz5Y-w44Ob44O844OgIDE!5e0!3m2!1sja!2sjp!4v1752646082571!5m2!1sja!2sjp"
-					style="border:0;" allowfullscreen="" loading="lazy"
-					referrerpolicy="no-referrer-when-downgrade"></iframe>
-				<ul class="directions">
-					<li class="directions__items">
-						<h4 class="directions__topic">徒歩・自転車・バス・電車でご来店の場合</h4>
-						<p class="directions__txt">1F デジハリ銀行側入口よりご入店いただき、右側のエレベーターをご利用ください。</p>
-					</li>
-					<li class="directions__items">
-						<h4 class="directions__topic">お車でご来店の場合</h4>
-						<p class="directions__txt">立体駐車場内のエレベーターより5F 屋上駐車場へ向かっていただき、5F 店内入口よりご入店ください。<br>
-							※1F～4Fの立体駐車場側店内エレベーターは9:00からの運転となります。</p>
-					</li>
-				</ul>
+				<div class="access__map">
+					<iframe
+						src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d51855.17289902081!2d139.7285052848944!3d35.67827482915856!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188c0d02d8064d%3A0xd11a5f0b379e6db7!2z55qH5bGF!5e0!3m2!1sja!2sjp!4v1763789205422!5m2!1sja!2sjp"
+						style="border:0;" allowfullscreen="" loading="lazy"
+						referrerpolicy="no-referrer-when-downgrade"></iframe>
+				</div>
+				<div class="access__address">
+					<h3 class="access__shop">赤のひととき　直営ショップ</h3>
+					<dl class="access__list">
+						<dt class="access__topic">住所</dt>
+						<dd>
+							<address class="address">
+								〒123-4567　<ruby>振津県輪呉市越蓮<rt>ふるつけんりんごしえちれん</rt></ruby>1-2-3
+							</address>
+						</dd>
+						<dt class="access__topic">営業時間</dt>
+						<dd>10:00-18:00</dd>
+						<dt class="access__topic">定休日</dt>
+						<dd>水曜、木曜</dd>
+					</dl>
+				</div>
 			</section>
 
 		</article>
 	</main>
 	<footer class="footer">
 		<div class="footer__group">
-			<h2 class="footer__topic">DHW MALL</h2>
-			<nav class="menu">
-				<ul class="menu__list">
-					<li class="menu__item"><a href="#lineUp">Line up</a></li>
-					<li class="menu__item"><a href="#news">News</a></li>
-					<li class="menu__item"><a href="#access">Access</a></li>
-				</ul>
-			</nav>
+			<div class="footer__header">
+				<p class="footer__logo"><img src="assets/images/logo.png" alt="赤のひととき"></p>
+				<div class="footer__sns">
+					<p class="footer__snstopic">赤のひととき公式SNS</p>
+					<ul class="footer__snslist">
+						<li class="footer__snsitem">
+							<a href="#" target="_blank"><img src="assets/images/icon-oneshot_red.svg" alt=""></a>
+						</li>
+						<li class="footer__snsitem">
+							<a href="#" target="_blank"><img src="assets/images/icon-y_red.svg" alt=""></a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<ul class="footer__list">
+				<li class="footer__item"><a href="#">Top</a></li>
+				<li class="footer__item"><a href="#lineUp">商品一覧</a></li>
+				<li class="footer__item"><a href="#news">お知らせ</a></li>
+				<li class="footer__item"><a href="#access">店舗情報</a></li>
+				<li class="footer__item"><a href="#">お問い合わせ</a></li>
+			</ul>
+			<ul class="footer__list">
+				<li class="footer__item"><a href="#">利用規約</a></li>
+				<li class="footer__item"><a href="#">特定書取引法に基づく表記</a></li>
+				<li class="footer__item"><a href="#">プライバシーポリシー</a></li>
+			</ul>
 		</div>
-		<ul class="sns">
-			<li class="sns__item"><a href="#" target="_blank"><img src="assets/images/icon-sns_photo.svg" alt=""></a>
-			</li>
-			<li class="sns__item"><a href="#" target="_blank"><img src="assets/images/icon-sns_tmark.svg" alt=""></a>
-			</li>
-			<li class="sns__item"><a href="#" target="_blank"><img src="assets/images/icon-sns_heart.svg" alt=""></a>
-			</li>
-		</ul>
-		<p class="copy"><small>&copy; 2023 DHW MALL.</small></p>
+		<p class="copy"><small>&copy; 20xx 赤のひととき All Rights Reserved.</small></p>
 	</footer>
 
 	<script src="https://code.jquery.com/jquery-3.7.0.min.js"
