@@ -1,13 +1,5 @@
 @charset "UTF-8";
 
-
-.lora-example {
-    font-family: "Lora", serif;
-    font-optical-sizing: auto;
-    font-weight: 500;
-    font-style: normal;
-}
-
 /* ====================
 general
 ==================== */
@@ -27,8 +19,9 @@ html {
 
 body {
     font-family: "Noto Serif JP", serif;
+    font-size: 1.5rem;
     font-style: normal;
-    font-weight: 500;
+    font-weight: 400;
     color: #ffffff;
     background-color: var(--basedarkred, #660000);
     line-height: var(--txtHeight, 1.3);
@@ -37,6 +30,13 @@ body {
 img {
     max-width: 100%;
     height: auto;
+}
+
+/* header pc */
+@media screen and (min-width: 769px) {
+    body {
+        font-size: 1.8rem;
+    }
 }
 
 /* ====================
@@ -75,7 +75,6 @@ header
     transform: translateX(-100%);
     transition: transform 0.4s;
     color: var(--basedarkred2);
-    font-size: 1.5rem;
 }
 
 .nav.active {
@@ -97,10 +96,10 @@ header
 .nav__item::before {
     content: "";
     display: inline-block;
-    width: 28px;
+    width: 26px;
     height: 1px;
     background-color: var(--basedarkred2);
-    margin: 0 16px 5px;
+    margin: 0 10px 5px;
 }
 
 .nav__sns {
@@ -113,6 +112,12 @@ header
 
 .nav__snstopic {
     text-align: center;
+    letter-spacing: -0.1rem;
+}
+
+.nav__snschar {
+    padding-left: 2px;
+    letter-spacing: 0.1rem;
 }
 
 .nav__snslist {
@@ -126,19 +131,59 @@ header
     width: 60px;
 }
 
-.article {
-    font-size: 1.5rem;
-    line-height: var(--txtHeight);
-}
+/* header pc */
+@media screen and (min-width: 769px) {
+    .header{
+        padding: 20px 70px;
+    }
 
-.section{
-    padding: 20px 0 40px;
+    .header__logo {
+        width: 200px;
+    }
+
+    .nav__header {
+        display: none;
+    }
+
+    .nav {
+        background: transparent;
+        width: auto;
+        height: auto;
+        padding: 0;
+        position: static;
+        transform: translateX(0);
+        color: #ffffff;
+    }
+
+    .nav__list {
+        display: flex;
+        flex-direction: row;
+        padding-top: 0px;
+        gap: 25px;
+        box-shadow: inset 0 0px 0px rgba(0, 0, 0, 0.35);
+    }
+
+    .nav__item{
+        font-size: 2.4rem;
+    }
+
+    .nav__item::before {
+        display: none;
+    }
+
+    .nav__sns {
+        display: none;
+    }
+
+    .header__btn {
+        display: none;
+    }
+
 }
 
 /* ====================
 main visual
 ==================== */
-
 .article__header {
     padding: 30px var(--contentPadding);
     background-image: url(../images/appletexture.png);
@@ -167,8 +212,12 @@ main visual
 }
 
 /* ====================
-about
+article, section
 ==================== */
+.section {
+    padding: 40px var(--contentPadding);
+}
+
 .section__topic {
     font-family: "Lora", serif;
     font-weight: 400;
@@ -178,15 +227,328 @@ about
     text-decoration: underline;
 }
 
-.about__wrapper{
-    background-image: url(../images/lace.png);
-    background-repeat: no-repeat;
-    background-size: cover;
+.section--light {
+    background-image: url(../images/appletexture.png);
+    background-repeat: repeat;
+}
+
+.section--light .section__topic {
+    color: var(--basedarkred);
+}
+
+/* ====================
+about
+==================== */
+.section--about {
+    padding: 40px 0;
+}
+
+.about {
+    position: relative;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.about__img--pc {
+    display: none;
+}
+
+.about__txt {
+    position: absolute;
+    top: 25%;
+    width: 100%;
+}
+
+.about__catch {
+    font-size: 2.2rem;
+    font-weight: bold;
+    color: var(--basered);
+}
+
+.about__caption {
+    margin-top: 2.5rem;
+}
+
+.about__caption p {
+    margin-top: 1.2rem;
+    color: var(--basedarkred);
+}
+
+/* ====================
+lineup
+==================== */
+.section--lineup {
+    padding: 40px 2%;
+}
+
+.lineUp {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 25px;
+    gap: 5px;
+}
+
+.lineUp__item {
+    width: 48%;
+    padding: 10px 1.5%;
+    border-radius: 10px;
+    background-color: #ffffff;
+    color: var(--basedarkred2);
+}
+
+.lineUp__name {
+    margin-top: 8px;
+    padding-left: 5px;
+    text-decoration: underline;
+}
+
+.lineUp__price {
+    margin-top: 8px;
+    padding-right: 15px;
+    font-family: "Lora", serif;
+    font-weight: 400;
+    font-style: normal;
+    text-align: right;
+}
+
+.lineUp__pricenum {
+    font-size: 1.8rem;
+}
+
+.lineUp__txt {
+    margin-top: 8px;
+    font-size: 1.2rem;
+    font-weight: 400;
+    letter-spacing: 0.1rem;
+    text-align: center;
+
+}
+
+.lineUp__btn {
+    display: block;
+    margin: 16px 10px 0px;
+    padding: 5px;
+    text-align: center;
+    background-color: var(--basedarkred);
+}
+
+.lineUp__btntxt {
+    font-size: 1.4rem;
+    color: #ffffff;
+}
+
+.lineUp__btntxt::after {
+    content: "";
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    margin-bottom: 1px;
+    border-top: 1px solid #ffffff;
+    border-right: 1px solid #ffffff;
+    transform: rotate(45deg);
+}
+
+.lineUp__link {
+    margin-top: 25px;
+    padding-right: 15px;
+    text-align: right;
+    color: var(--basedarkred2);
+}
+
+.lineUp__linktxt::after {
+    content: "";
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    margin-bottom: 1px;
+    border-top: 1px solid var(--basedarkred2);
+    border-right: 1px solid var(--basedarkred2);
+    transform: rotate(45deg);
 }
 
 
+/* ====================
+story
+==================== */
+.story__item {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 20px;
+}
 
+.story__content {
+    padding: 20px 5% 40px;
+    border-radius: 5px;
+    background-color: #ffffff;
+    color: var(--basedarkred2);
+}
+
+.story__topic {
+    padding-left: 5px;
+    font-size: 2.0rem;
+    font-weight: bold;
+    color: var(--basered);
+}
+
+.story__txt {
+    margin-top: 20px;
+}
+
+.story__img {
+    width: 100%;
+    height: 60vh;
+    border-radius: 5px;
+    object-fit: cover;
+}
 
 /* ====================
-common
+news
 ==================== */
+.news__list {
+    margin: 20px 3% 0px;
+    padding: 0 5% 20px;
+    border: 1px solid var(--basedarkred2);
+    border-radius: 10px;
+    background-color: #ffffff;
+    color: var(--basedarkred2);
+}
+
+.news__topic {
+    margin-top: 20px;
+    padding-left: 3px;
+    font-family: "Lora", serif;
+    font-size: 1.3rem;
+    font-weight: 400;
+    font-style: normal;
+    color: var(--basered);
+}
+
+.news__txt {
+    margin-top: 5px;
+    padding: 0 3px 3px;
+    border-bottom: 1px dashed var(--basedarkred2);
+}
+
+/* ====================
+access
+==================== */
+.access__map {
+    margin-top: 25px;
+    width: 100%;
+    height: 50vh;
+}
+
+.access__address {
+    margin-top: 20px;
+    padding-left: 5px;
+}
+
+.access__shop {
+    font-size: 1.6rem;
+    font-weight: bold;
+}
+
+.access__list {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 5.5rem 3rem 3rem;
+    margin-top: 8px;
+}
+
+.access__topic {
+    margin-top: 2px;
+}
+
+.access__topic::after {
+    content: ":";
+    margin-left: 5px;
+}
+
+.access__detail {
+    margin-top: 2px;
+}
+
+.address {
+    margin-top: 2px;
+}
+
+/* ====================
+footer
+==================== */
+.footer {
+    border-top: 5px double #ffffff;
+    background-color: var(--basedarkred2);
+}
+
+.footer__group {
+    padding: 0 var(--contentPadding);
+    margin: 30px 0;
+}
+
+.footer__header {
+    display: flex;
+    align-items: center;
+    margin: 0 5px;
+    gap: 6%;
+}
+
+.footer__logo {
+    width: 150px;
+}
+
+.footer__sns {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+}
+
+.footer__snstopic {
+    text-align: center;
+    letter-spacing: -0.1rem;
+}
+
+.footer__snschar {
+    padding-left: 2px;
+    letter-spacing: 0.1rem;
+}
+
+.footer__snslist {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer__snsitem {
+    width: 60px;
+}
+
+.footer__list {
+    margin-top: 30px;
+}
+
+.footer__item {
+    margin-top: 5px;
+}
+
+.footer__item::before {
+    content: "";
+    display: inline-block;
+    width: 26px;
+    height: 1px;
+    background-color: #ffffff;
+    margin: 0 10px 5px 0;
+}
+
+.copy {
+    padding: 10px var(--contentPadding);
+    text-align: right;
+    background-image: url(../images/appletexture.png);
+    background-repeat: repeat;
+    color: var(--basedarkred2);
+}
+
+
+/* ogp画像を用意する */
