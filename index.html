@@ -90,8 +90,7 @@
 						</div>
 						<div class="about__caption">
 							<p>豊かな水資源と冷涼な気候に<br class="spbr">恵まれた<ruby>振津県輪呉市<rt>ふるつけんりんごし</rt></ruby></p>
-							<p>私たちはこの地でのみ育つ<br class="spbr">特別なりんご「<ruby>逢振<rt>おうふる</rt></ruby>」で<br
-									class="spbr">素敵なひとときを<br class="spbr">お届けします。</p>
+							<p>私たちはこの地でのみ育つ<br class="spbr">特別なりんご「<ruby>逢振<rt>おうふる</rt></ruby>」で<br>素敵なひとときを<br class="spbr">お届けします。</p>
 						</div>
 					</div>
 				</div>
@@ -124,7 +123,7 @@
 						<p class="lineUp__img"><img src="assets/images/applepie.jpg" alt="逢振のアップルパイ"></p>
 						<div class="lineUp__content">
 							<h3 class="lineUp__name">逢振のアップルパイ</h3>
-							<p class="lineUp__price">¥xxxx-</p>
+							<p class="lineUp__price">¥<span class="lineUp__pricenum">xxxx</span>-</p>
 							<p class="lineUp__txt">X営業日以内にお届け</p>
 							<a class="lineUp__btn" href="#"><span class="lineUp__btntxt">詳しくはこちら</span></a>
 						</div> <!-- lineUp__content -->
@@ -133,7 +132,7 @@
 						<p class="lineUp__img"><img src="assets/images/appleice.jpg" alt="りんごの木陰アイス４つセット"></p>
 						<div class="lineUp__content">
 							<h3 class="lineUp__name">りんごの木陰アイス４つセット</h3>
-							<p class="lineUp__price">¥xxxx-</p>
+							<p class="lineUp__price">¥<span class="lineUp__pricenum">xxxx</span>-</p>
 							<p class="lineUp__txt">X営業日以内にお届け</p>
 							<a class="lineUp__btn" href="#"><span class="lineUp__btntxt">詳しくはこちら</span></a>
 						</div> <!-- lineUp__content -->
@@ -166,13 +165,13 @@
 						</div>
 						<img class="story__img" src="assets/images/story1.jpg" alt="りんご果樹園">
 					</li>
-					<li class="story__item">
+					<li class="story__item story__item--rev">
 						<div class="story__content">
 							<h3 class="story__topic">出逢いへの感謝を胸にこれからも</h3>
 							<div class="story__txt">
 								<p>「赤のひととき」は、この逢振との運命的な出会いの輪を繋げていきたいという想いから生まれたブランドです。</p>
 								<br>
-								<p>私たちはの逢振の生産から加工、販売までを一貫して手がけており、直営ショップでは、逢振の特徴を活かしたスイーツやドリンクをご用意しています。</p>
+								<p>私たちは逢振の生産から加工、販売までを一貫して手がけており、直営ショップでは、逢振の特徴を活かしたスイーツやドリンクをご用意しています。</p>
 								<br>
 								<p>皆様にとって素敵な「赤のひととき」を―</p>
 							</div>
@@ -187,25 +186,28 @@
 					News
 				</h2>
 				<dl class="news__list">
-					<dt class="news__topic">
-						<time datetime="2099-05-01">20xx.05.01</time>
+					<dt class="news__header">
+						<time class="news__date" datetime="2099-05-01">20xx.05.01</time>
+						<p class="news__topic">新商品「りんごの木陰」登場</p>
 					</dt>
 					<dd class="news__txt">
-						新商品アイス「りんごの木陰」登場
+						新商品のアイス「りんごの木陰」が登場しました。 <a href="#">商品特設ページ</a>を公開しております。是非ご確認ください。
 					</dd>
 
-					<dt class="news__topic">
-						<time datetime="2099-04-22">20xx.04.22</time>
+					<dt class="news__header">
+						<time class="news__date" datetime="2099-04-22">20xx.04.22</time>
+						<p class="news__topic">サイトメンテナンスのお知らせ</p>
 					</dt>
 					<dd class="news__txt">
-						サイトメンテナンスのお知らせ
+						4/24 深夜1:00-3:00にメンテナンス作業を実施します。作業中、一時的にページにつながりにくい時間が発生しますが、何卒ご了承下さい。
 					</dd>
 
-					<dt class="news__topic">
-						<time datetime="2099-03-18">20xx.03.18</time>
+					<dt class="news__header">
+						<time class="news__date" datetime="2099-03-18">20xx.03.18</time>
+						<p class="news__topic">雪室りんご発送開始のお知らせ</p>
 					</dt>
 					<dd class="news__txt">
-						雪室りんご発送開始のお知らせ
+						本日より雪室りんごの発送を随時開始します。発送時にはご予約いただいた時のメールアドレスにご連絡しますのでご確認ください。
 					</dd>
 				</dl>
 			</section>
@@ -253,18 +255,20 @@
 					</ul>
 				</div>
 			</div>
-			<ul class="footer__list">
-				<li class="footer__item"><a href="#">Top</a></li>
-				<li class="footer__item"><a href="#lineUp">商品一覧</a></li>
-				<li class="footer__item"><a href="#news">お知らせ</a></li>
-				<li class="footer__item"><a href="#access">店舗情報</a></li>
-				<li class="footer__item"><a href="#">お問い合わせ</a></li>
-			</ul>
-			<ul class="footer__list">
-				<li class="footer__item"><a href="#">利用規約</a></li>
-				<li class="footer__item"><a href="#">特定書取引法に基づく表記</a></li>
-				<li class="footer__item"><a href="#">プライバシーポリシー</a></li>
-			</ul>
+			<div class="footer__lists">
+				<ul class="footer__list">
+					<li class="footer__item"><a href="#">Top</a></li>
+					<li class="footer__item"><a href="#lineUp">商品一覧</a></li>
+					<li class="footer__item"><a href="#news">お知らせ</a></li>
+					<li class="footer__item"><a href="#access">店舗情報</a></li>
+					<li class="footer__item"><a href="#">お問い合わせ</a></li>
+				</ul>
+				<ul class="footer__list">
+					<li class="footer__item"><a href="#">利用規約</a></li>
+					<li class="footer__item"><a href="#">特定書取引法に基づく表記</a></li>
+					<li class="footer__item"><a href="#">プライバシーポリシー</a></li>
+				</ul>
+			</div>
 		</div>
 		<p class="copy"><small>&copy; 20xx 赤のひととき All Rights Reserved.</small></p>
 	</footer>
