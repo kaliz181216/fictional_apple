@@ -1,0 +1,49 @@
+@charset "UTF-8";
+
+/* ====================
+main visual
+==================== */
+.article__header {
+    padding: 30px var(--contentPadding);
+    background-image: url(../images/appletexture.png);
+    background-repeat: repeat;
+    box-shadow: inset 0 4px 4px rgba(0, 0, 0, 0.35);
+}
+
+.mainImg {
+    border: 3px solid var(--basedarkred);
+    padding: 15px;
+    position: relative;
+    z-index: 0;
+}
+
+.mainImg__frame {
+    box-shadow: inset 3px 4px 4px rgba(0, 0, 0, 0.35);
+}
+
+.mainImg__sp {
+    position: relative;
+    z-index: -1;
+}
+
+.mainImg__pc {
+    display: none;
+}
+
+@media screen and (min-width: 769px) {
+    .mainImg {
+        width: 80%;
+        margin: 30px auto;
+    }
+
+    .mainImg__sp {
+        display: none;
+    }
+
+    .mainImg__pc {
+        display: block;
+        position: relative;
+        z-index: -1;
+    }
+
+}

@@ -11,7 +11,8 @@
 	<meta property="og:url" content="https://dhwmall.co.jp">
 	<meta property="og:type" content="website">
 	<meta property="og:title" content="赤のひととき公式 -apple tint-">
-	<meta property="og:description" content="りんごが彩る、赤のひととき。豊かな水資源と冷涼な気候に恵まれた振津県輪呉市。私たちはこの地でのみ育つ特別なりんご「逢振」で素敵なひとときをお届けします。">
+	<meta property="og:description"
+		content="りんごが彩る、赤のひととき。豊かな水資源と冷涼な気候に恵まれた振津県輪呉市。私たちはこの地でのみ育つ特別なりんご「逢振」で素敵なひとときをお届けします。">
 	<meta property="og:site_name" content="赤のひととき">
 	<meta property="og:image" content="https://dhwmall.co.jp/assets/images/ogp.jpg">
 
@@ -29,7 +30,8 @@
 
 	<!-- css -->
 	<link rel="stylesheet" href="assets/css/destyle.min.css">
-	<link rel="stylesheet" href="assets/css/style.css">
+	<link rel="stylesheet" href="assets/css/common.css">
+	<link rel="stylesheet" href="assets/css/appleshade.css">
 </head>
 
 <body>
@@ -70,75 +72,85 @@
 	<main class="main">
 		<article class="article">
 			<header class="article__header">
-				<div class="mainImg">
-					<h2 class="mainImg__frame">
-						<img class="mainImg__sp" src="assets/images/icevisual-sp.jpg" alt="りんごの木陰">
-						<img class="mainImg__pc" src="assets/images/icevisual-pc.jpg" alt="りんごの木陰">
-					</h2>
-				</div>
+				<h2 class="mainImg">
+					<img class="mainImg__sp" src="assets/images/icevisual-sp.jpg" alt="りんごの木陰">
+					<img class="mainImg__pc" src="assets/images/icevisual-pc.jpg" alt="りんごの木陰">
+				</h2>
 			</header>
 			<!-- about -->
 			<section class="section section--about">
-				<h2 class="section__topic">
-					「りんごの木陰」でひんやり優雅に
+				<h2 class="section__topic section__topic--about">
+					「りんごの木陰」<span class="about__curning">で</span><br class="spbr">ひんやり優雅に
 				</h2>
 				<div class="about">
-					<div class="about__txt">
-						<div class="about__caption">
-							<p>ご好評いただいている逢振のアップルティーを<br>スイーツでも楽しみたい―</p>
-							<p>そんな声にお答えして、りんごの木の木陰で過ごす<br>涼やかなティータイムをイメージしたアイスクリーム<br>「りんごの木陰」が登場しました。</p>
-						</div>
-					</div>
+					<p class="about__txt">ご好評いただいている<br class="spbr">逢振のアップルティーを<br>スイーツでも楽しみたい―</p>
+					<p class="about__txt">そんな声にお答えして、<br class="spbr">りんごの木の木陰で過ごす<br>涼やかなティータイムを<br
+							class="spbr">イメージしたアイスクリーム<br>「りんごの木陰」が登場しました。</p>
 				</div>
 			</section>
-			<!-- story -->
-			<section class="section">
-				<h2 class="section__topic section__topic--story">
-					アイスはりんごの木をイメージした二層仕立て―
+			<!-- layer -->
+			<section class="section section--layer">
+				<div class="layer__decobox"></div>
+				<h2 class="section__topic section__topic--layer">
+					アイスはりんごの木をイメージした<br class="spbr">二層仕立て―
 				</h2>
-				<ul class="story">
-					<li class="story__item story__item--rev">
-						<div class="story__content">
-							<div class="story__txt">
-								<p>「一層目には、濃厚なバニラアイスにつぶつぶとした食感のりんごコンポートを加え、仕上げにりんごの葉をイメージしたピスタチオをトッピング</p>
+				<div class="layer__contents">
+					<ul class="layer">
+						<li class="layer__item layer__item--rev">
+							<div class="layer__content">
+								<div class="layer__txt">
+									<p>一層目には、濃厚なバニラアイスにつぶつぶとした食感のりんごコンポートを加え、仕上げにりんごの葉をイメージしたピスタチオをトッピング</p>
+								</div>
 							</div>
-						</div>
-						<img class="story__img" src="assets/images/icelayer1.jpg" alt="りんごの木">
-					</li>
-					<li class="story__item">
-						<div class="story__content">
-							<div class="story__txt">
-								<p>二層目は、幹をイメージしたアップルティー風味のアイス。爽やかなコクのある紅茶と瑞々しいりんごの香りが口いっぱいに広がります。</p>
+							<div class="layer__imgbox">
+								<img class="layer__img" src="assets/images/icelayer1.jpg" alt="りんごの木">
 							</div>
-						</div>
-						<img class="story__img" src="assets/images/icelayer2.jpg" alt="アップルティー">
-					</li>
-				</ul>
+						</li>
+						<li class="layer__item">
+							<div class="layer__content">
+								<div class="layer__txt">
+									<p>二層目は、幹をイメージしたアップルティー風味のアイス。爽やかなコクのある紅茶と瑞々しいりんごの香りが口いっぱいに広がります。</p>
+								</div>
+							</div>
+							<div class="layer__imgbox">
+								<img class="layer__img" src="assets/images/icelayer2.jpg" alt="アップルティー">
+							</div>
+						</li>
+					</ul>
+				</div>
 			</section>
 			<!-- points -->
 			<section id="points" class="section section--light">
 				<h2 class="section__topic section__topic--news">
 					Points
-					<!-- ここは画像にしたい -->
+					<!-- ここは画像にするかも？ -->
 				</h2>
 				<div class="points__wrapper">
-					<div class="points__description">
-						<h3 class="points__topic"><img src="assets/images/point1.svg" alt="point1"></h3>
-						<p>りんごコンポート</p>
-						<p>りんごコンポートには逢振を使用。ラム酒とシナモンでじっくりと煮込み、大人な味わいに仕上げました。</p>
+					<div class="points__description points__description--point1">
+						<h3 class="points__headimg"><img src="assets/images/point1.svg" alt="point1"></h3>
+						<div class="points__txt">
+							<p class="points__topic">りんごコンポート</p>
+							<p>りんごコンポートには逢振を使用。<br>ラム酒とシナモンでじっくりと煮込み、大人な味わいに仕上げました。</p>
+						</div>
+						<img class="points__arrow1" src="assets/images/pointarrow1.svg" alt="">
 					</div>
-					<div class="points__img"><img src="assets/images/pointice.jpg" alt="アイス商品画像"></div>
-					<div class="points__description">
-						<h3 class="points__topic"><img src="assets/images/point2.svg" alt="point2"></h3>
-						<p>アップルティーアイス</p>
-						<p>何回もの試行錯誤を重ね、逢振の香りが引き立つアップルティーと牛乳の絶妙のバランスを実現しました。</p>
+					<div class="points__img"><img src="assets/images/pointice.webp" alt="アイス商品画像"></div>
+					<div class="points__description points__description--point2">
+						<img class="points__arrow2" src="assets/images/pointarrow1.svg" alt="">
+						<h3 class="points__headimg"><img src="assets/images/point2.svg" alt="point2"></h3>
+						<div class="points__txt">
+							<p class="points__topic">アップルティーアイス</p>
+							<p>何回もの試行錯誤を重ね、逢振の香りが引き立つアップルティーと牛乳の絶妙のバランスを実現しました。</p>
+						</div>
 					</div>
-
-					<div class="points__cv">
-						<div class="points__btn">製品情報を詳しく見る</div>
-						<p class="points__cvtxt">直営ショップでも販売中！</p>
+				</div>
+				<div class="points__cv">
+					<div class="points__btn">
+						<a href="#" class="points__btninner" target="_blank" rel="noopener noreferrer">
+							<span class="points__btntxt">製品情報を詳しく見る</span>
+						</a>
 					</div>
-
+					<p class="points__cvtxt">直営ショップでも販売中！</p>
 				</div>
 			</section>
 		</article>

@@ -1,0 +1,511 @@
+@charset "UTF-8";
+
+/* ====================
+general
+==================== */
+
+:root {
+    --basered: #cc3333;
+    --basedarkred: #660000;
+    --basedarkred2: #330000;
+
+    --txtHeight: 1.3;
+    --contentPadding: 4.0%;
+    --contentWidth: 90%;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: "Noto Serif JP", serif;
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: 400;
+    color: #ffffff;
+    background-color: var(--basedarkred, #660000);
+    line-height: var(--txtHeight, 1.3);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* header pc */
+@media screen and (min-width: 769px) {
+    body {
+        font-size: 1.8rem;
+    }
+
+    .spbr {
+        display: none;
+    }
+}
+
+/* ====================
+header
+==================== */
+.header,
+.nav__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px var(--contentPadding);
+    border-bottom: double 3px var(--basedarkred2);
+}
+
+.header__logo,
+.nav__logo {
+    width: 100px;
+}
+
+.header__btn,
+.nav__btn {
+    width: 60px;
+    padding-left: 10px;
+}
+
+/* nav初期表示 */
+.nav {
+    background-image: url(../images/appletexture.png);
+    background-repeat: repeat;
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    transform: translateX(-100%);
+    transition: transform 0.4s;
+    color: var(--basedarkred2);
+}
+
+.nav.active {
+    transform: translateX(0);
+}
+
+.nav__header {
+    background-color: var(--basedarkred);
+}
+
+.nav__list {
+    display: flex;
+    flex-direction: column;
+    padding-top: 20px;
+    gap: 10px;
+    box-shadow: inset 0 4px 4px rgba(0, 0, 0, 0.35);
+}
+
+.nav__item::before {
+    content: "";
+    display: inline-block;
+    width: 26px;
+    height: 1px;
+    background-color: var(--basedarkred2);
+    margin: 0 10px 5px;
+}
+
+.nav__sns {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 50px;
+    gap: 20px;
+}
+
+.nav__snstopic {
+    text-align: center;
+    letter-spacing: -0.1rem;
+}
+
+.nav__snschar {
+    padding-left: 2px;
+    letter-spacing: 0.1rem;
+}
+
+.nav__snslist {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 100px;
+}
+
+.nav__snsitem {
+    width: 60px;
+}
+
+/* header pc */
+@media screen and (min-width: 769px) {
+    .header {
+        padding: 10px 70px;
+    }
+
+    .header__logo {
+        width: 150px;
+    }
+
+    .nav__header {
+        display: none;
+    }
+
+    .nav {
+        background: transparent;
+        width: auto;
+        height: auto;
+        padding: 0;
+        position: static;
+        transform: translateX(0);
+        color: #ffffff;
+    }
+
+    .nav__list {
+        display: flex;
+        flex-direction: row;
+        padding-top: 0px;
+        gap: 25px;
+        box-shadow: inset 0 0px 0px rgba(0, 0, 0, 0.35);
+    }
+
+    .nav__item::before {
+        display: none;
+    }
+
+    .nav__sns {
+        display: none;
+    }
+
+    .header__btn {
+        display: none;
+    }
+
+}
+
+
+/* ====================
+article, section
+==================== */
+.section {
+    padding: 40px var(--contentPadding);
+}
+
+.section__topic {
+    font-family: "Lora", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 2.4rem;
+    text-align: center;
+    text-decoration: underline;
+}
+
+.section--light {
+    background-image: url(../images/appletexture.png);
+    background-repeat: repeat;
+}
+
+.section--light .section__topic {
+    color: var(--basedarkred);
+}
+
+@media screen and (min-width: 769px) {
+    .section {
+        padding: 40px 0 60px;
+    }
+
+    .section__topic {
+        font-size: 3.0rem;
+        margin-bottom: 40px;
+    }
+}
+
+/* ====================
+story
+==================== */
+.story__item {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.story__content {
+    padding: 40px 5%;
+    border-radius: 5px;
+    background-color: #ffffff;
+    color: var(--basedarkred2);
+}
+
+.story__topic {
+    padding-left: 5px;
+    font-size: 2.0rem;
+    font-weight: bold;
+    color: var(--basered);
+}
+
+.story__txt {
+    margin-top: 20px;
+}
+
+.story__txt ul {
+    margin-left: 20px;
+    list-style-type: disc;
+}
+
+.story__img {
+    width: 100%;
+    height: 60vh;
+    border-radius: 5px;
+    object-fit: cover;
+}
+
+@media screen and (min-width: 769px) {
+    .story {
+        width: var(--contentWidth);
+        margin: 0 auto;
+    }
+    
+    .story__item {
+        flex-direction: row;
+        margin-top: 40px;
+    }
+    
+    .story__item.story__item--rev {
+        flex-direction: row-reverse;
+    }
+    
+    .story__content {
+        padding-top: 40px;
+    }
+    
+    .story__topic {
+        font-size: 2.2rem;
+    }
+    
+    .story__img {
+        width: 32%;
+        height: auto;
+    }
+}
+
+@media screen and (min-width: 1100px) {    
+    .story__img {
+        height: 50vh;
+    }
+}
+
+
+/* ====================
+news
+==================== */
+.news__list {
+    margin: 20px 3% 0px;
+    padding: 0 5% 20px;
+    border: 1px solid var(--basedarkred2);
+    border-radius: 10px;
+    background-color: #ffffff;
+    color: var(--basedarkred2);
+}
+
+.news__header {
+    margin-top: 20px;
+    padding-left: 3px;
+}
+
+.news__date {
+    font-family: "Lora", serif;
+    font-size: 1.3rem;
+    font-weight: 400;
+    font-style: normal;
+    color: var(--basered);
+}
+
+.news__topic {
+    font-weight: bold;
+    margin-top: 4px;
+}
+
+.news__txt {
+    margin-top: 8px;
+    padding: 0 3px 10px;
+    border-bottom: 1px dashed var(--basedarkred2);
+    line-height: 1.5;
+}
+
+.news__txt a {
+    color: blue;
+}
+
+@media screen and (min-width: 769px) {
+    .news__list {
+        width: var(--contentWidth);
+        margin: 0 auto;
+        padding: 20px 5% 50px;
+    }
+
+    .news__date {
+        font-size: 1.8rem;
+    }
+
+    .news__topic {
+        display: inline-block;
+        margin-left: 15px;
+    }
+}
+
+/* ====================
+access
+==================== */
+.access__map {
+    margin-top: 25px;
+    width: 100%;
+    height: 50vh;
+}
+
+.access__address {
+    margin-top: 20px;
+    padding-left: 5px;
+}
+
+.access__shop {
+    font-size: 1.6rem;
+    font-weight: bold;
+}
+
+.access__list {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 5.5rem 3rem 3rem;
+    margin-top: 8px;
+}
+
+.access__topic {
+    margin-top: 2px;
+}
+
+.access__topic::after {
+    content: ":";
+    margin-left: 5px;
+}
+
+.access__detail {
+    margin-top: 2px;
+}
+
+.address {
+    margin-top: 2px;
+}
+
+@media screen and (min-width: 769px) {
+    .access__map {
+        display: block;
+        width: var(--contentWidth);
+        margin: 0 auto;
+    }
+
+    .access__address {
+        width: var(--contentWidth);
+        margin: 20px auto 0;
+
+    }
+
+    .access__shop {
+        font-size: 1.8rem;
+    }
+
+    .access__list {
+        grid-template-columns: 100px 1fr;
+        grid-template-rows: 6.5rem 4rem 4rem;
+    }
+}
+
+/* ====================
+footer
+==================== */
+.footer {
+    border-top: 5px double #ffffff;
+    background-color: var(--basedarkred2);
+}
+
+.footer__group {
+    padding: 0 var(--contentPadding);
+    margin: 30px 0;
+}
+
+.footer__header {
+    display: flex;
+    align-items: center;
+    margin: 0 5px;
+    gap: 6%;
+}
+
+.footer__logo {
+    width: 150px;
+}
+
+.footer__sns {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+}
+
+.footer__snstopic {
+    text-align: center;
+    letter-spacing: -0.1rem;
+}
+
+.footer__snschar {
+    padding-left: 2px;
+    letter-spacing: 0.1rem;
+}
+
+.footer__snslist {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer__snsitem {
+    width: 60px;
+}
+
+.footer__list {
+    margin-top: 30px;
+}
+
+.footer__item {
+    margin-top: 5px;
+}
+
+.footer__item::before {
+    content: "";
+    display: inline-block;
+    width: 26px;
+    height: 1px;
+    background-color: #ffffff;
+    margin: 0 10px 5px 0;
+}
+
+.copy {
+    padding: 10px var(--contentPadding);
+    text-align: right;
+    background-image: url(../images/appletexture.png);
+    background-repeat: repeat;
+    color: var(--basedarkred2);
+}
+
+@media screen and (min-width: 769px) {    
+    .footer__logo {
+        width: 200px;
+    }
+    
+    .footer__lists{
+        display: flex;
+        gap: 60px;
+        width: var(--contentWidth);
+        margin: 0 auto;
+    }
+}
+
+/* ogp画像を用意する */
