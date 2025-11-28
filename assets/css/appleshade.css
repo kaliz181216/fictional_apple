@@ -9,8 +9,8 @@ main visual
 
 @media screen and (min-width: 769px) {
     .mainImg {
-        width: 80%;
-        margin: 30px auto;
+        max-width: 1280px;
+        margin: 0 auto;
     }
 
     .mainImg__sp {
@@ -19,8 +19,6 @@ main visual
 
     .mainImg__pc {
         display: block;
-        position: relative;
-        z-index: -1;
     }
 
 }
@@ -32,31 +30,38 @@ about
     background-color: var(--basedarkred2);
 }
 
-.section__topic--about{
+.section__topic--about {
     padding-right: 20px;
     font-family: "Noto Serif JP", serif;
     font-weight: 500;
 }
 
-.about__curning{
+.about__curning {
     margin-left: -12px;
 }
 
-.about__txt{
+.about__txt {
     margin-top: 20px;
     text-align: center;
 }
 
+@media screen and (min-width: 769px) {
+    .section--about {
+        padding: 110px 0;
+    }
+}
+
+
 /* ====================
 layer
 ==================== */
-.section--layer{
+.section--layer {
     position: relative;
     z-index: 0;
     padding: 40px 0;
 }
 
-.layer__decobox{
+.layer__decobox {
     position: absolute;
     top: 70px;
     right: 20%;
@@ -67,26 +72,26 @@ layer
     background-repeat: repeat;
     rotate: 10deg;
     transform-origin: top right;
-    box-shadow: 8px 8px 6px rgba(0, 0, 0, 0.35);
+    box-shadow: 8px 8px 6px var(--shadowred);
 }
 
-.section__topic--layer{
+.section__topic--layer {
     width: 75%;
     padding: 15px var(--contentPadding);
     font-size: 1.5rem;
     color: var(--basered);
     text-decoration: none;
     background-color: #ffffff;
-    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.35);
+    box-shadow: 4px 4px 4px var(--shadowred);
 }
 
 
-.layer__item{
+.layer__item {
     display: flex;
     flex-direction: column-reverse;
     margin-top: 20px;
     gap: 0;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.35);
+    box-shadow: 0px 6px 4px var(--shadowred);
 }
 
 .layer__content {
@@ -101,21 +106,66 @@ layer
     object-fit: cover;
 }
 
+@media screen and (min-width: 769px) {
+    .section--layer {
+        padding: 160px 0 90px;
+    }
+
+    .layer__decobox {
+        height: 850px;
+        top: 205px;
+        right: 30%;
+        box-shadow: 15px 20px 6px var(--shadowred);
+    }
+
+    .section__topic--layer {
+        width: 65%;
+        padding: 30px 0;
+        font-size: 2.4rem;
+    }
+
+    .layer__item {
+        flex-direction: row;
+        margin-top: 40px;
+    }
+
+    .layer__item.layer__item--rev {
+        flex-direction: row-reverse;
+    }
+
+    .layer__content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 50%;
+    }
+
+    .layer__imgbox {
+        width: 50%;
+    }
+
+    .layer__img {
+        width: 100%;
+        height: 370px;
+    }
+
+}
+
 /* ====================
 points
 ==================== */
-.points__wrapper{
+.points__wrapper {
     display: flex;
     flex-direction: column;
     gap: 30px;
     margin-top: 20px;
 }
 
-.points__headimg{
+.points__headimg {
     padding-left: 3px;
 }
 
-.points__description{
+.points__description {
     position: relative;
     width: 90%;
     padding: 15px 20px 25px 10px;
@@ -123,26 +173,26 @@ points
     background-color: var(--basedarkred);
 }
 
-.points__description.points__description--point1{
+.points__description.points__description--point1 {
     margin: 0 auto 0 0;
 }
 
-.points__description.points__description--point2{
+.points__description.points__description--point2 {
     margin: 0 0 0 auto;
 }
 
-.points__txt{
+.points__txt {
     margin-top: 5px;
     padding-left: 20px;
 }
 
-.points__topic{
+.points__topic {
     margin-bottom: 5px;
     font-weight: bold;
     font-size: 1.8rem;
 }
 
-.points__arrow1{
+.points__arrow1 {
     position: absolute;
     rotate: 90deg;
     transform-origin: top left;
@@ -151,7 +201,7 @@ points
     bottom: 5px;
 }
 
-.points__arrow2{
+.points__arrow2 {
     position: absolute;
     rotate: -90deg;
     transform-origin: top left;
@@ -160,37 +210,106 @@ points
     left: 60%;
 }
 
-.points__cv{
+.points__cv {
     margin-top: 40px;
 }
 
-.points__btn{
+.points__btn {
     margin: 0 auto;
     width: 200px;
     padding: 5px;
     background-color: var(--basedarkred);
 }
 
-.points__btninner{
+.points__btninner {
     display: block;
     padding: 8px 5px;
     border: 1px solid #ffffff;
     text-align: center;
 }
 
-.points__btntxt::after{
-    content:"";
+.points__btntxt::after {
+    content: "";
     display: inline-block;
     width: 8px;
     height: 8px;
-    margin-bottom: 1px;
+    margin-bottom: 2px;
     border-top: 1px solid #ffffff;
     border-right: 1px solid #ffffff;
     transform: rotate(45deg);
 }
 
-.points__cvtxt{
+.points__cvtxt {
     margin-top: 10px;
     color: var(--basered);
     text-align: center;
+}
+
+@media screen and (min-width: 769px) {
+    .section--points {
+        padding: 40px 0 90px;
+    }
+
+    .points__wrapper {
+        flex-direction: row;
+        gap: 0;
+        max-width: 1280px;
+        margin-top: 60px;
+        padding: 0 var(--contentPadding);
+    }
+
+    .points__description {
+        flex: 1;
+        width: auto;
+        padding: 15px 10px 25px;
+    }
+
+    .points__description.points__description--point1 {
+        margin: 0 15px auto 0;
+    }
+
+    .points__description.points__description--point2 {
+        margin: auto 0 0 15px;
+    }
+
+    .points__txt {
+        margin-top: 10px;
+        padding: 0 10px;
+    }
+
+    .points__img {
+        flex: 1.1;
+        padding: 20px 0;
+    }
+
+    .points__arrow1 {
+        rotate: 0deg;
+        width: 180px;
+        bottom: 40%;
+        left: auto;
+        right: 0;
+        transform: translateX(90%);
+
+    }
+
+    .points__arrow2 {
+        rotate: 180deg;
+        width: 180px;
+        top: 50%;
+        left: auto;
+    }
+
+    .points__cv {
+        margin-top: 90px;
+    }
+
+    .points__btn {
+        width: 330px;
+        padding: 7px;
+    }
+
+    .points__btninner {
+        padding: 20px 5px;
+    }
+
 }
