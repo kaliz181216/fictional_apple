@@ -56,8 +56,12 @@ about
 
 .about {
     position: relative;
-    margin-top: 20px;
     text-align: center;
+}
+
+.about__img--sp{
+    max-width: 400px;
+    margin: 0 auto;
 }
 
 .about__img--pc {
@@ -66,7 +70,7 @@ about
 
 .about__txt {
     position: absolute;
-    top: 25%;
+    top: 30%;
     width: 100%;
 }
 
@@ -124,7 +128,6 @@ lineup
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    margin-top: 25px;
     gap: 5px;
 }
 
@@ -313,7 +316,7 @@ story
 news
 ==================== */
 .news__list {
-    margin: 20px 3% 0px;
+    margin: 0 3%;
     padding: 0 5% 20px;
     border: 1px solid var(--basedarkred2);
     border-radius: 10px;
@@ -371,7 +374,6 @@ news
 access
 ==================== */
 .access__map {
-    margin-top: 25px;
     width: 100%;
     height: 50vh;
 }

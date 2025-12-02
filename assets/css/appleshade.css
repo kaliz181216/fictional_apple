@@ -3,14 +3,18 @@
 /* ====================
 main visual
 ==================== */
+.mainImg {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
 .mainImg__pc {
     display: none;
 }
 
 @media screen and (min-width: 769px) {
     .mainImg {
-        max-width: 1280px;
-        margin: 0 auto;
+        max-width: 1000px;
     }
 
     .mainImg__sp {
@@ -28,26 +32,80 @@ about
 ==================== */
 .section--about {
     background-color: var(--basedarkred2);
+    padding: 0;
+}
+
+.about__wrapper {
+    position: relative;
+    max-width: 450px;
+    margin: 0 auto;
+    padding: 40px var(--contentPadding) 70px;
+}
+
+.about__deco--l {
+    position: absolute;
+    width: 100px;
+    left: 2%;
+    bottom: 20px;
+    transform: scale(-1, 1);
+}
+
+.about__deco--r {
+    position: absolute;
+    width: 100px;
+    right: 2%;
+    bottom: 20px;
 }
 
 .section__topic--about {
-    padding-right: 20px;
+    margin-bottom: 35px;
     font-family: "Noto Serif JP", serif;
     font-weight: 500;
 }
 
-.about__curning {
-    margin-left: -12px;
+.section__topic--about::before {
+    width: 50px;
+    top: 0px;
+    transform: scale(-1, -1) translateX(100%) rotate(80deg);
+}
+
+.section__topic--about::after {
+    width: 50px;
+    top: 0px;
+    transform: scale(1, -1) translateX(50%) rotate(80deg);
+}
+
+.about__curning1 {
+    margin-left: 5px;
+}
+
+.about__curning2 {
+    margin-left: -10px;
+    margin-right: 17px;
 }
 
 .about__txt {
-    margin-top: 20px;
+    margin: 20px auto 0;
     text-align: center;
 }
 
 @media screen and (min-width: 769px) {
-    .section--about {
+    .about__wrapper {
+        max-width: 850px;
         padding: 110px 0;
+    }
+
+    .about__deco--l,
+    .about__deco--r {
+        bottom: 80px;
+    }
+
+    .section__topic--about::after {
+        transform: scale(1, -1) translateX(30%) rotate(80deg);
+    }
+
+    .about__curning2 {
+        margin-right: 3px;
     }
 }
 
@@ -78,7 +136,9 @@ layer
 .section__topic--layer {
     width: 75%;
     padding: 15px var(--contentPadding);
+    font-family: "Noto Serif JP", serif;
     font-size: 1.5rem;
+    font-weight: 500;
     color: var(--basered);
     text-decoration: none;
     background-color: #ffffff;
@@ -121,7 +181,7 @@ layer
     .section__topic--layer {
         width: 65%;
         padding: 30px 0;
-        font-size: 2.4rem;
+        font-size: 1.8rem;
     }
 
     .layer__item {
@@ -154,11 +214,14 @@ layer
 /* ====================
 points
 ==================== */
+.section__topic--points{
+    margin-bottom: 40px;
+}
+
 .points__wrapper {
     display: flex;
     flex-direction: column;
     gap: 30px;
-    margin-top: 20px;
 }
 
 .points__headimg {
@@ -192,22 +255,32 @@ points
     font-size: 1.8rem;
 }
 
+.points__imgbox {
+    position: relative;
+    max-width: 400px;
+    margin: 0 auto;
+
+}
+
 .points__arrow1 {
     position: absolute;
     rotate: 90deg;
     transform-origin: top left;
-    width: 130px;
+    width: 160px;
     left: 30%;
-    bottom: 5px;
+    transform: translateX(-30%);
+    z-index: 1;
 }
 
 .points__arrow2 {
     position: absolute;
     rotate: -90deg;
     transform-origin: top left;
-    width: 130px;
-    top: 30px;
-    left: 60%;
+    width: 160px;
+    left: 70%;
+    bottom: 0;
+    transform: translateX(-50%);
+    z-index: 1;
 }
 
 .points__cv {
@@ -246,6 +319,26 @@ points
 }
 
 @media screen and (min-width: 769px) {
+    .points__wrapper {
+        padding: 0 var(--contentPadding);
+    }
+
+    .points__cv {
+        margin-top: 90px;
+    }
+
+    .points__btn {
+        width: 330px;
+        padding: 7px;
+    }
+
+    .points__btninner {
+        padding: 20px 5px;
+    }
+}
+
+/* tablet */
+@media screen and (min-width: 961px) {
     .section--points {
         padding: 40px 0 90px;
     }
@@ -254,7 +347,7 @@ points
         flex-direction: row;
         gap: 0;
         max-width: 1280px;
-        margin-top: 60px;
+        margin: 60px auto 0;
         padding: 0 var(--contentPadding);
     }
 
@@ -284,32 +377,18 @@ points
 
     .points__arrow1 {
         rotate: 0deg;
-        width: 180px;
-        bottom: 40%;
+        width: 170px;
+        top: 20%;
         left: auto;
-        right: 0;
-        transform: translateX(90%);
-
+        transform: translateX(-15%);
     }
 
     .points__arrow2 {
         rotate: 180deg;
-        width: 180px;
-        top: 50%;
+        width: 170px;
+        bottom: 10%;
         left: auto;
-    }
-
-    .points__cv {
-        margin-top: 90px;
-    }
-
-    .points__btn {
-        width: 330px;
-        padding: 7px;
-    }
-
-    .points__btninner {
-        padding: 20px 5px;
+        transform: translateX(-15%);
     }
 
 }
