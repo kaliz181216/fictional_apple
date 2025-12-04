@@ -4,35 +4,143 @@
 main visual
 ==================== */
 .article__header {
-    padding: 30px var(--contentPadding);
+    padding: 30px var(--contentPadding) 60px;
     background-image: url(../images/appletexture.png);
     background-repeat: repeat;
 }
 
+.maindeco-up,
+.maindeco-down {
+    margin: 0 auto;
+    width: 60%;
+}
+
+.maindeco-down {
+    transform: scale(1, -1);
+}
+
 .mainImg {
-    border: 3px solid var(--basedarkred);
-    padding: 15px;
-    position: relative;
-    z-index: 0;
-}
-
-.mainImg__frame {
-    box-shadow: inset 3px 4px 4px rgba(0, 0, 0, 0.35);
-}
-
-.mainImg__sp {
-    position: relative;
-    z-index: -1;
+    max-width: 400px;
+    margin: 0 auto;
 }
 
 .mainImg__pc {
     display: none;
 }
 
+.mainImg__sp {
+    position: relative;
+    margin: 2px 0;
+}
+
+.maindeco-ul__sp {
+    position: absolute;
+    width: 50px;
+    top: 0;
+    left: -10px;
+    transform: rotate(-45deg);
+}
+
+.maindeco-ur__sp {
+    position: absolute;
+    width: 50px;
+    top: 0;
+    right: -10px;
+    transform: rotate(45deg);
+}
+
+.maindeco-dr__sp {
+    position: absolute;
+    width: 50px;
+    right: -10px;
+    bottom: 0;
+    transform: rotate(135deg);
+}
+
+.maindeco-dl__sp {
+    position: absolute;
+    width: 50px;
+    left: -10px;
+    bottom: 0;
+    transform: rotate(-135deg);
+}
+
+.slick-list {
+    clip-path: url(#spclip);
+    padding: 10px;
+    border: 3px double var(--basedarkred);
+}
+
+.slick-dotted.slick-slider {
+    margin-bottom: 0px;
+}
+
+.maindots {
+    position: absolute;
+    width: 100%;
+    bottom: -40px;
+    text-align: center;
+    transform: translateY(100%);
+}
+
+.maindots li {
+    position: relative;
+    display: inline-block;
+    width: 20px;
+    margin-right: 28px;
+}
+
+.maindots li::after {
+    position: absolute;
+    top: 50%;
+    right: -16px;
+    display: block;
+    content: '';
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background-color: var(--basedarkred);
+}
+
+.maindots li:last-child {
+    margin-right: 0;
+}
+
+.maindots li:last-child::after {
+    display: none;
+}
+
+.maindots li button {
+    width: 100%;
+    color: transparent;
+    background-image: url(../images/slickbutton_default.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+}
+
+.maindots li button:hover,
+.maindots li button:focus,
+.maindots li.slick-active button:hover,
+.maindots li.slick-active button:focus {
+    filter: brightness(1.1);
+    filter: drop-shadow(1px 1px 2px rgba(255,256,256,0.8)) drop-shadow(-1px -1px 2px rgba(255,255,255,0.8));
+}
+
+.maindots li.slick-active button {
+    background-image: url(../images/slickbutton_active.svg);
+    filter: drop-shadow(1px 1px 2px rgba(255,256,256,0.5)) drop-shadow(-1px -1px 2px rgba(255,255,255,0.5));
+}
+
 @media screen and (min-width: 769px) {
     .mainImg {
-        width: 80%;
-        margin: 30px auto;
+        max-width: 1100px;
+    }
+
+    .maindeco-up,
+    .maindeco-down {
+        width: 350px;
     }
 
     .mainImg__sp {
@@ -40,9 +148,51 @@ main visual
     }
 
     .mainImg__pc {
-        display: block;
         position: relative;
-        z-index: -1;
+        display: block;
+        margin: 5px 0;
+    }
+
+    .maindeco-ul__pc {
+        position: absolute;
+        width: 90px;
+        top: -20px;
+        left: -30px;
+        transform: rotate(-45deg);
+    }
+
+    .maindeco-ur__pc {
+        position: absolute;
+        width: 90px;
+        top: -20px;
+        right: -30px;
+        transform: rotate(45deg);
+    }
+
+    .maindeco-dr__pc {
+        position: absolute;
+        width: 90px;
+        right: -30px;
+        bottom: -20px;
+        transform: rotate(135deg);
+    }
+
+    .maindeco-dl__pc {
+        position: absolute;
+        width: 90px;
+        left: -30px;
+        bottom: -20px;
+        transform: rotate(-135deg);
+    }
+
+    .slick-list {
+        clip-path: url(#pcclip);
+        padding: 8px 10px;
+        border: 3px double var(--basedarkred);
+    }
+
+    .maindots{
+        bottom: -60px;
     }
 
 }
@@ -59,7 +209,7 @@ about
     text-align: center;
 }
 
-.about__img--sp{
+.about__img--sp {
     max-width: 400px;
     margin: 0 auto;
 }
@@ -114,6 +264,11 @@ about
 
     .about__catch {
         font-size: 2.8rem;
+    }
+
+    .about__space--pc {
+        display: inline-block;
+        width: 10px;
     }
 }
 
@@ -282,31 +437,31 @@ story
         width: var(--contentWidth);
         margin: 0 auto;
     }
-    
+
     .story__item {
         flex-direction: row;
         margin-top: 40px;
     }
-    
+
     .story__item.story__item--rev {
         flex-direction: row-reverse;
     }
-    
+
     .story__content {
         padding-top: 40px;
     }
-    
+
     .story__topic {
         font-size: 2.2rem;
     }
-    
+
     .story__img {
         width: 32%;
         height: auto;
     }
 }
 
-@media screen and (min-width: 1100px) {    
+@media screen and (min-width: 1100px) {
     .story__img {
         height: 50vh;
     }
@@ -434,5 +589,3 @@ access
         grid-template-rows: 6.5rem 4rem 4rem;
     }
 }
-
-

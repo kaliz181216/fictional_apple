@@ -11,7 +11,8 @@
 	<meta property="og:url" content="https://dhwmall.co.jp">
 	<meta property="og:type" content="website">
 	<meta property="og:title" content="赤のひととき公式 -apple tint-">
-	<meta property="og:description" content="りんごが彩る、赤のひととき。豊かな水資源と冷涼な気候に恵まれた振津県輪呉市。私たちはこの地でのみ育つ特別なりんご「逢振」で素敵なひとときをお届けします。">
+	<meta property="og:description"
+		content="りんごが彩る、赤のひととき。豊かな水資源と冷涼な気候に恵まれた振津県輪呉市。私たちはこの地でのみ育つ特別なりんご「逢振」で素敵なひとときをお届けします。">
 	<meta property="og:site_name" content="赤のひととき">
 	<meta property="og:image" content="https://dhwmall.co.jp/assets/images/main-ogp
 	.jpg">
@@ -30,54 +31,59 @@
 
 	<!-- css -->
 	<link rel="stylesheet" href="assets/css/destyle.min.css">
+	<link rel="stylesheet" href="slick/slick.css">
+	<link rel="stylesheet" href="slick/slick-theme.css">
 	<link rel="stylesheet" href="assets/css/common.css">
 	<link rel="stylesheet" href="assets/css/top.css">
 </head>
 
 <body>
-	<header class="header">
+	<header id="header" class="header">
 		<h1 class="header__logo"><a href="index.html"><img src="assets/images/logo.png" alt="赤のひととき"></a></h1>
-		<nav class="nav">
-			<div class="nav__header">
-				<p class="nav__logo"><img src="assets/images/logo.png" alt="赤のひととき"></p>
-				<div class="nav__btn">
-					<img src="assets/images/btn-close.svg" alt="">
-				</div>
-			</div>
-			<ul class="nav__list">
-				<li class="nav__item"><a href="#">Top</a></li>
-				<li class="nav__item"><a href="#lineUp">商品一覧</a>
-				</li>
-				<li class="nav__item"><a href="#news">お知らせ</a></li>
-				<li class="nav__item"><a href="#access">店舗情報</a>
-				</li>
-			</ul>
-			<div class="nav__sns">
-				<p class="nav__snstopic">赤のひととき公式<span class="nav__snschar">SNS</span></p>
-				<ul class="nav__snslist">
-					<li class="nav__snsitem">
-						<a href="#" target="_blank"><img src="assets/images/icon-oneshot_red.svg" alt=""></a>
-					</li>
-					<li class="nav__snsitem">
-						<a href="#" target="_blank"><img src="assets/images/icon-y_red.svg" alt=""></a>
-					</li>
-				</ul>
-			</div>
-		</nav>
-		<!-- header__btn -->
-		<div class="header__btn">
-			<img src="assets/images/btn-menu.svg" alt="">
-		</div>
 	</header>
 	<main class="main">
 		<article class="article">
 			<header class="article__header">
 				<div class="mainImg">
-					<h2 class="mainImg__frame">
-						<img class="mainImg__sp" src="assets/images/main-sp.jpg" alt="赤のひとときについて">
-						<img class="mainImg__pc" src="assets/images/main-pc.jpg" alt="赤のひとときについて">
-					</h2>
+					<div class="maindeco-up"><img src="assets/images/maindeco2.png" alt=""></div>
+					<div class="mainImg__sp">
+						<img class="maindeco-ul__sp" src="assets/images/maindeco1.svg" alt="">
+						<img class="maindeco-ur__sp" src="assets/images/maindeco1.svg" alt="">
+						<img class="maindeco-dl__sp" src="assets/images/maindeco1.svg" alt="">
+						<img class="maindeco-dr__sp" src="assets/images/maindeco1.svg" alt="">
+						<ul class="slider">
+							<li><h2><a class="hoverbright" href="index.html#story"><img src="assets/images/main-sp.jpg" alt="赤のひとときについて"></a></h2></li>
+							<li><h2><a class="hoverbright" href="appleshade.html"><img src="assets/images/icevisual-sp.jpg" alt="りんごの木陰"></a></h2></li>
+							<li><h2><img src="assets/images/sns-sp.jpg" alt="SNS宣伝"></h2></li>
+						</ul>
+					</div>
+					<div class="mainImg__pc">
+						<img class="maindeco-ul__pc" src="assets/images/maindeco1.svg" alt="">
+						<img class="maindeco-ur__pc" src="assets/images/maindeco1.svg" alt="">
+						<img class="maindeco-dl__pc" src="assets/images/maindeco1.svg" alt="">
+						<img class="maindeco-dr__pc" src="assets/images/maindeco1.svg" alt="">
+						<ul class="slider">
+							<li><h2><a class="hoverbright" href="index.html#story"><img src="assets/images/main-pc.jpg" alt="赤のひとときについて"></a></h2></li>
+							<li><h2><a  class="hoverbright" href="appleshade.html"><img src="assets/images/icevisual-pc.jpg" alt="りんごの木陰"></a></h2></li>
+							<li><h2><img src="assets/images/sns-pc.jpg" alt="SNS宣伝"></h2></li>
+						</ul>
+					</div>
+					<div class="maindeco-down"><img src="assets/images/maindeco2.png" alt=""></div>
 				</div>
+				<!-- sp clippath -->
+				<svg xmlns="http://www.w3.org/2000/svg" width="0" height="0" viewBox="0 0 345 420">
+					<clipPath id="spclip" clipPathUnits="objectBoundingBox">
+						<path transform="scale(0.0029, 0.00238)"
+						d="M285,415.03c0-33.14,26.86-60,60-60V60C311.86,60,285,33.14,285,0H60C60,33.14,33.14,60,0,60v300c33.14,0,60,26.86,60,60h225.22c-.13-1.64-.22-3.29-.22-4.97Z" />
+					</clipPath>
+				</svg>
+				<!-- pc clippath -->
+				<svg xmlns="http://www.w3.org/2000/svg" width="0" height="0" viewBox="0 0 1030 545">
+					<clipPath id="pcclip" clipPathUnits="objectBoundingBox">
+						<path transform="scale(0.0009709, 0.001835)"
+						d="M1030,460V85C983.06,85,945,46.94,945,0H85C85,46.94,46.94,85,0,85v375c46.94,0,85,38.06,85,85h860c0-46.94,38.06-85,85-85Z" />
+					</clipPath>
+				</svg>
 			</header>
 			<!-- about -->
 			<section class="section section--about">
@@ -88,11 +94,11 @@
 					<div class="about__img--sp"><img src="assets/images/lace-sp.png" alt=""></div>
 					<div class="about__img--pc"><img src="assets/images/lace-pc.png" alt=""></div>
 					<div class="about__txt">
-						<div class="about__catch">りんごが彩る<br class="spbr"><span class="about__space--pc">赤のひととき</span>
-						</div>
+						<div class="about__catch">りんごが彩る<br class="spbr"><span class="about__space--pc"></span>赤のひととき</div>
 						<div class="about__caption">
 							<p>豊かな水資源と冷涼な気候に<br class="spbr">恵まれた<ruby>振津県輪呉市<rt>ふるつけんりんごし</rt></ruby></p>
-							<p>私たちはこの地でのみ育つ<br class="spbr">特別なりんご「<ruby>逢振<rt>おうふる</rt></ruby>」で<br>素敵なひとときを<br class="spbr">お届けします。</p>
+							<p>私たちはこの地でのみ育つ<br class="spbr">特別なりんご「<ruby>逢振<rt>おうふる</rt></ruby>」で<br>素敵なひとときを<br
+									class="spbr">お届けします。</p>
 						</div>
 					</div>
 				</div>
@@ -140,10 +146,10 @@
 						</div> <!-- lineUp__content -->
 					</li>
 				</ul>
-				<p class="lineUp__link"><a href="#"><span class="lineUp__linktxt">全ての商品を見る</span></a></p>
+				<p class="lineUp__link"><a href="#"><span class="lineUp__linktxt attention">全ての商品を見る</span></a></p>
 			</section>
 			<!-- story -->
-			<section class="section">
+			<section id="story" class="section">
 				<h2 class="section__topic section__topic--story">
 					Story
 				</h2>
@@ -193,7 +199,7 @@
 						<p class="news__topic">新商品「りんごの木陰」登場</p>
 					</dt>
 					<dd class="news__txt">
-						新商品のアイス「りんごの木陰」が登場しました。 <a href="#">商品特設ページ</a>を公開しております。是非ご確認ください。
+						新商品のアイス「りんごの木陰」が登場しました。 <a href="appleshade.html">商品特設ページ</a>を公開しております。是非ご確認ください。
 					</dd>
 
 					<dt class="news__header">
@@ -241,43 +247,13 @@
 
 		</article>
 	</main>
-	<footer class="footer">
-		<div class="footer__group">
-			<div class="footer__header">
-				<p class="footer__logo"><img src="assets/images/logo.png" alt="赤のひととき"></p>
-				<div class="footer__sns">
-					<p class="footer__snstopic">赤のひととき公式<span class="footer__snschar">SNS</span></p>
-					<ul class="footer__snslist">
-						<li class="footer__snsitem">
-							<a href="#" target="_blank"><img src="assets/images/icon-oneshot_white.svg" alt=""></a>
-						</li>
-						<li class="footer__snsitem">
-							<a href="#" target="_blank"><img src="assets/images/icon-y_white.svg" alt=""></a>
-						</li>
-					</ul>
-				</div>
-			</div>
-			<div class="footer__lists">
-				<ul class="footer__list">
-					<li class="footer__item"><a href="#">Top</a></li>
-					<li class="footer__item"><a href="#lineUp">商品一覧</a></li>
-					<li class="footer__item"><a href="#news">お知らせ</a></li>
-					<li class="footer__item"><a href="#access">店舗情報</a></li>
-					<li class="footer__item"><a href="#">お問い合わせ</a></li>
-				</ul>
-				<ul class="footer__list">
-					<li class="footer__item"><a href="#">利用規約</a></li>
-					<li class="footer__item"><a href="#">特定書取引法に基づく表記</a></li>
-					<li class="footer__item"><a href="#">プライバシーポリシー</a></li>
-				</ul>
-			</div>
-		</div>
-		<p class="copy"><small>&copy; 20xx 赤のひととき All Rights Reserved.</small></p>
-	</footer>
+	<footer id="footer" class="footer"></footer>
 
 	<script src="https://code.jquery.com/jquery-3.7.0.min.js"
 		integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+	<script src="slick/slick.min.js"></script>
 	<script src="assets/js/main.js"></script>
+	<script src="assets/js/top.js"></script>
 </body>
 
 </html>
