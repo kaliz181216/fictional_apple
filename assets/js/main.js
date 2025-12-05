@@ -91,7 +91,14 @@
 			const tooltip = document.createElement("p");
 			tooltip.textContent = '本ページはデモなため遷移しません。';
 			tooltip.classList.add('attention__tooltip');
-			this.appendChild(tooltip);
+
+			if($(window).width()*0.5 > $(this).offset().left){
+				tooltip.classList.add('attention__tooltip--left');
+			}else{
+				tooltip.classList.add('attention__tooltip--right');
+			}
+
+			$(this).append(tooltip);
 		});
 
 		attention.mouseout(function(){

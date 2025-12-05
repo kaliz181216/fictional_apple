@@ -295,9 +295,10 @@ lineup
 }
 
 .lineUp__name {
-    margin-top: 8px;
+    margin-top: 12px;
     padding-left: 5px;
-    text-decoration: underline;
+    font-weight: 600;
+    color: var(--basedarkred);
 }
 
 .lineUp__price {
@@ -348,9 +349,14 @@ lineup
 
 .lineUp__link {
     margin-top: 25px;
-    padding-right: 15px;
-    text-align: right;
     color: var(--basedarkred2);
+}
+
+.lineUp__linkblock{
+    display: block;
+    width: 150px;
+    margin: 0 15px 0 auto;
+    text-align: right;
 }
 
 .lineUp__linktxt::after {
@@ -385,7 +391,9 @@ lineup
         width: var(--contentWidth);
         margin: 25px auto 0;
     }
-
+    .lineUp__linkblock{
+        width: 170px;
+    }
 
     .lineUp__linktxt::after {
         margin-bottom: 3px;
@@ -502,10 +510,6 @@ news
     padding: 0 3px 10px;
     border-bottom: 1px dashed var(--basedarkred2);
     line-height: 1.5;
-}
-
-.news__txt a {
-    color: blue;
 }
 
 @media screen and (min-width: 769px) {
