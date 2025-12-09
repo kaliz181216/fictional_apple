@@ -68,6 +68,17 @@ main visual
 .slick-list {
     clip-path: url(#spclip);
     padding: 10px;
+}
+
+.slick-list::after{
+    content: "";
+    position:absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    display:block;
+    width:100%;
+    height:100%;
     border: 3px double var(--basedarkred);
 }
 
@@ -135,7 +146,7 @@ main visual
 
 @media screen and (min-width: 769px) {
     .mainImg {
-        max-width: 1100px;
+        max-width: 900px;
     }
 
     .maindeco-up,
@@ -187,8 +198,7 @@ main visual
 
     .slick-list {
         clip-path: url(#pcclip);
-        padding: 8px 10px;
-        border: 3px double var(--basedarkred);
+        padding: 11px 13px;
     }
 
     .maindots{
@@ -326,12 +336,15 @@ lineup
 .lineUp__btn {
     display: block;
     margin: 16px 10px 0px;
-    padding: 5px 5px 7px;
+    padding: 3px;
     text-align: center;
     background-color: var(--basedarkred);
 }
 
 .lineUp__btntxt {
+    display: block;
+    padding: 5px 0;
+    border: 1px solid #ffffff;
     font-size: 1.4rem;
     color: #ffffff;
 }
@@ -456,6 +469,7 @@ story
     }
 
     .story__content {
+        flex: 2.5;
         padding-top: 40px;
     }
 

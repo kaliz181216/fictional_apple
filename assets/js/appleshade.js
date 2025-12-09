@@ -1,32 +1,23 @@
 'use strict';
 {
     $(function () {
-        //fadeIn
-        $(window).on('load scroll', function(){
-            const fadeIn = $('.fadeIn');
-
-            fadeIn.each(function(){
-                const boxOffset=$(this).offset().top;
-                const scrollPos=$(window).scrollTop();
-                const wh=$(window).height();
-
-                if(scrollPos + wh - 100 > boxOffset){
-                    $(this).addClass('animated');
-                }
-            });
-
-            const cutIn = $('.cutIn');
-
-            cutIn.each(function(){
-                const boxOffset=$(this).offset().top;
-                const scrollPos=$(window).scrollTop();
-                const wh=$(window).height();
-
-                if(scrollPos + wh - 100 > boxOffset){
-                    $(this).addClass('animated');
-                }
-            });
-
+        //animation
+        $(window).on('load scroll', function () {
+            $('.fadeIn').each(scrollCallback(100));
+            $('.cutIn').each(scrollCallback(100));
+            $('.layer__decobox').each(scrollCallback(70));
         })
     });
+}
+
+function scrollCallback(igheight) {
+    return function(){
+        const boxOffset = $(this).offset().top;
+        const scrollPos = $(window).scrollTop();
+        const wh = $(window).height();
+
+        if (scrollPos + wh - igheight > boxOffset) {
+            $(this).addClass('animated');
+        }
+    }
 }

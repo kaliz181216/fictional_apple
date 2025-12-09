@@ -124,13 +124,19 @@ layer
     top: 70px;
     right: 20%;
     width: 100%;
-    height: 100vh;
+    height: 90vh;
     z-index: -10;
     background-image: url(../images/appletexture.png);
     background-repeat: repeat;
-    rotate: 10deg;
     transform-origin: top right;
     box-shadow: 8px 8px 6px var(--shadowred);
+    transition: 1.8s;
+    transform: translate(-10%, -10%);
+}
+
+.layer__decobox.animated {
+    transform: translate(0, 0);
+    rotate: 10deg;
 }
 
 .section__topic--layer {
@@ -165,21 +171,21 @@ layer
     object-fit: cover;
 }
 
-.cutIn{
-    transform: translate(-50px,0);
+.cutIn {
+    transform: translate(-50px, 0);
     transition: 2s;
     opacity: 0;
 }
 
-.fadeIn{
-    transform: translate(0px,80px);
+.fadeIn {
+    transform: translate(0px, 80px);
     transition: 1.2s;
     opacity: 0;
 }
 
 .cutIn.animated,
 .fadeIn.animated {
-    transform: translate(0,0);
+    transform: translate(0, 0);
     opacity: 1;
 }
 
@@ -231,7 +237,7 @@ layer
 /* ====================
 points
 ==================== */
-.section__topic--points{
+.section__topic--points {
     margin-bottom: 40px;
 }
 
@@ -286,7 +292,6 @@ points
     transform-origin: top left;
     width: 160px;
     left: 30%;
-    transform: translateX(-30%);
     z-index: 1;
 }
 
@@ -297,8 +302,20 @@ points
     width: 160px;
     left: 70%;
     bottom: 0;
-    transform: translateX(-50%);
     z-index: 1;
+}
+
+.points__arrow1.fadeIn,
+.points__arrow2.fadeIn {
+    transform: translate(0, 0);
+}
+
+.points__arrow1.fadeIn.animated {
+    transform: translateX(-30%);
+}
+
+.points__arrow2.fadeIn.animated {
+    transform: translateX(-50%);
 }
 
 .points__cv {
@@ -406,6 +423,11 @@ points
         width: 170px;
         bottom: 10%;
         left: auto;
+        transform: translateX(-15%);
+    }
+
+    .points__arrow1.fadeIn.animated,
+    .points__arrow2.fadeIn.animated {
         transform: translateX(-15%);
     }
 
