@@ -254,6 +254,11 @@ about
         padding: 40px 0 60px;
     }
 
+    .about{
+        max-width: var(--contentMaxwidth);
+        margin: 0 auto;
+    }
+
     .about__img--sp {
         display: none;
     }
@@ -456,6 +461,7 @@ story
 @media screen and (min-width: 769px) {
     .story {
         width: var(--contentWidth);
+        max-width: var(--contentMaxwidth);
         margin: 0 auto;
     }
 
@@ -529,6 +535,7 @@ news
 @media screen and (min-width: 769px) {
     .news__list {
         width: var(--contentWidth);
+        max-width: var(--contentMaxwidth);
         margin: 0 auto;
         padding: 20px 5% 50px;
     }
@@ -589,11 +596,13 @@ access
     .access__map {
         display: block;
         width: var(--contentWidth);
+        max-width: var(--contentMaxwidth);
         margin: 0 auto;
     }
 
     .access__address {
         width: var(--contentWidth);
+        max-width: var(--contentMaxwidth);
         margin: 20px auto 0;
 
     }

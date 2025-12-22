@@ -13,6 +13,7 @@ general
     --txtHeight: 1.3;
     --contentPadding: 4.0%;
     --contentWidth: 90%;
+    --contentMaxwidth: 1100px;
 }
 
 html {
